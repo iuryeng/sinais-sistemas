@@ -1,0 +1,9 @@
+# Dependências para construir o site JupyterLite (usado no deploy do GitHub Pages).
+# Os pacotes científicos (numpy/scipy/matplotlib) NÃO entram aqui: são providos
+# pelo Pyodide no navegador, em tempo de execução.
+
+jupyterlite-core==0.7.6
+jupyterlite-pyodide-kernel==0.7.2
+
+# Necessário para o JupyterLite indexar conteúdo customizado (--contents notebooks)
+jupyter-server>=2.0
