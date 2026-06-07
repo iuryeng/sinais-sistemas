@@ -1,0 +1,13 @@
+# Dependencias dos notebooks de Sinais e Sistemas
+# Instale com: pip install -r requirements.txt
+
+numpy
+scipy
+matplotlib
+soundfile
+ipywidgets
+requests
+
+# Ambiente de execucao dos notebooks
+jupyter
+notebook
