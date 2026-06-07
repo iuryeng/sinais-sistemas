@@ -1,6 +1,11 @@
 # Sinais e Sistemas com Python
 
 [![CI](https://github.com/iuryeng/sinais-sistemas/actions/workflows/ci.yml/badge.svg)](https://github.com/iuryeng/sinais-sistemas/actions/workflows/ci.yml)
+[![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://iuryeng.github.io/sinais-sistemas/)
+
+> ▶️ **Rode no navegador, sem instalar nada:**
+> **[sinais-sistemas interativo](https://iuryeng.github.io/sinais-sistemas/)** — os
+> notebooks executam direto no browser (JupyterLite + Pyodide), até no celular.
 
 Estudo prático de **Sinais e Sistemas** usando Python, NumPy, SciPy e Matplotlib.
 Cada notebook explora um tópico da disciplina combinando teoria (definições,
@@ -41,7 +46,18 @@ sinais-sistemas/
 └── README.md
 ```
 
-## Como executar
+## Rode no navegador (sem instalar)
+
+A forma mais rápida de experimentar: abra
+**<https://iuryeng.github.io/sinais-sistemas/>**. O site roda um JupyterLab
+completo **dentro do navegador** (JupyterLite + Pyodide/WebAssembly) — você edita
+e executa os notebooks sem instalar Python nem nada, até no celular.
+
+> No navegador, o download de áudio por URL pode ser bloqueado pelo sandbox do
+> Pyodide; nesse caso os notebooks caem automaticamente no *fallback* sintético.
+> Para a experiência completa (com áudio real), rode localmente — veja abaixo.
+
+## Como executar (localmente)
 
 Pré-requisito: **Python 3.10+**.
 

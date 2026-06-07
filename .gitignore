@@ -17,6 +17,10 @@ wet_source.wav
 *.generated.wav
 assets/audio/_cache/
 
+# Build do JupyterLite
+_output/
+.jupyterlite.doit.db
+
 # Sistema operacional / editor
 .DS_Store
 Thumbs.db
