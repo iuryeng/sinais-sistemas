@@ -18,6 +18,7 @@ percorridos em ordem:
 | 03 | [`03-analise-sinais-sonoros.ipynb`](notebooks/03-analise-sinais-sonoros.ipynb) | Análise de sinais sonoros: harmônicos e conteúdo espectral de amostras de áudio. |
 | 04 | [`04-transformada-fourier.ipynb`](notebooks/04-transformada-fourier.ipynb) | Transformada de Fourier — exemplos resolvidos (módulo, fase e espectro) na linha do Oppenheim. |
 | 05 | [`05-convolucao-rir.ipynb`](notebooks/05-convolucao-rir.ipynb) | Convolução de um sinal de áudio com a resposta ao impulso de uma sala (auralização). *Material de terceiros — ver Créditos.* |
+| 06 | [`06-amostragem-aliasing.ipynb`](notebooks/06-amostragem-aliasing.ipynb) | Amostragem, Teorema de Nyquist–Shannon, aliasing e dobramento espectral, reconstrução por interpolação *sinc* e um exemplo audível de aliasing. |
 
 ## Estrutura do projeto
 
