@@ -1,5 +1,7 @@
 # Sinais e Sistemas com Python
 
+[![CI](https://github.com/iuryeng/sinais-sistemas/actions/workflows/ci.yml/badge.svg)](https://github.com/iuryeng/sinais-sistemas/actions/workflows/ci.yml)
+
 Estudo prático de **Sinais e Sistemas** usando Python, NumPy, SciPy e Matplotlib.
 Cada notebook explora um tópico da disciplina combinando teoria (definições,
 fórmulas) com implementação e visualização computacional.
@@ -19,16 +21,22 @@ percorridos em ordem:
 | 04 | [`04-transformada-fourier.ipynb`](notebooks/04-transformada-fourier.ipynb) | Transformada de Fourier — exemplos resolvidos (módulo, fase e espectro) na linha do Oppenheim. |
 | 05 | [`05-convolucao-rir.ipynb`](notebooks/05-convolucao-rir.ipynb) | Convolução de um sinal de áudio com a resposta ao impulso de uma sala (auralização). *Material de terceiros — ver Créditos.* |
 | 06 | [`06-amostragem-aliasing.ipynb`](notebooks/06-amostragem-aliasing.ipynb) | Amostragem, Teorema de Nyquist–Shannon, aliasing e dobramento espectral, reconstrução por interpolação *sinc* e um exemplo audível de aliasing. |
+| 07 | [`07-filtros-digitais.ipynb`](notebooks/07-filtros-digitais.ipynb) | Filtros FIR e IIR (Butterworth): resposta em frequência, projeto com SciPy, FIR × IIR, remoção de ruído e filtragem de áudio (passa-banda). |
 
 ## Estrutura do projeto
 
 ```
 sinais-sistemas/
-├── notebooks/        # os notebooks, numerados na ordem de estudo
+├── notebooks/            # os notebooks, numerados na ordem de estudo
+├── src/sinais/          # pacote Python reutilizável (funções testadas)
+├── tests/               # testes pytest do pacote
 ├── assets/
-│   └── images/       # figuras usadas/geradas pelos notebooks
-├── tools/            # utilitários de manutenção do repositório
-├── requirements.txt  # dependências Python
+│   └── images/          # figuras usadas/geradas pelos notebooks
+├── tools/               # utilitários de manutenção/geração
+├── .github/workflows/   # CI (testes + execução dos notebooks)
+├── requirements.txt     # dependências dos notebooks
+├── requirements-dev.txt # dependências de teste/CI
+├── pyproject.toml       # configuração do pytest
 ├── LICENSE
 └── README.md
 ```
@@ -61,6 +69,28 @@ repositório leve e autocontido, a estratégia é **baixar as amostras por URL e
 tempo de execução** (a própria célula faz o download), em vez de versionar os
 arquivos `.wav`. Os áudios baixados/gerados ficam fora do controle de versão
 (ver `.gitignore`).
+
+## Pacote `sinais` e testes
+
+Funções centrais foram extraídas dos notebooks para um pacote reutilizável e
+**testado** em [`src/sinais/`](src/sinais):
+
+- `sinais.sistemas` — classificação de sistemas em tempo discreto
+  (`eh_linear`, `eh_invariante_no_tempo`, `eh_causal`, `tem_memoria`), por
+  sondagem numérica.
+- `sinais.amostragem` — `frequencia_nyquist`, `satisfaz_nyquist`,
+  `freq_aparente` (aliasing) e `reconstrucao_sinc` (Whittaker–Shannon).
+
+Para rodar os testes:
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+pytest
+```
+
+A cada push/PR, o [workflow de CI](.github/workflows/ci.yml) instala as
+dependências, roda o `pytest` e executa os notebooks autocontidos (06 e 07)
+para garantir que não quebram.
 
 ## Bibliotecas utilizadas
 
