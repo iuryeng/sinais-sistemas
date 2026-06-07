@@ -64,11 +64,12 @@ jupyter notebook   # ou: jupyter lab
 
 ### Sobre as amostras de áudio
 
-Os notebooks de áudio (02, 03 e 05) usam amostras de som. Para manter o
-repositório leve e autocontido, a estratégia é **baixar as amostras por URL em
-tempo de execução** (a própria célula faz o download), em vez de versionar os
-arquivos `.wav`. Os áudios baixados/gerados ficam fora do controle de versão
-(ver `.gitignore`).
+Os notebooks de áudio (02, 03 e 05) **baixam as amostras por URL em tempo de
+execução** (fonte estável: `pyroomacoustics`/LCAV), em vez de versionar arquivos
+`.wav`. O carregamento tem **fallback sintético**: se não houver internet (ou a
+URL falhar), uma célula gera um sinal equivalente, então os notebooks rodam do
+zero em qualquer ambiente. O notebook 05 ainda sintetiza a resposta ao impulso
+de sala (RIR) em código. Nada de áudio precisa ser versionado.
 
 ## Pacote `sinais` e testes
 
@@ -89,17 +90,18 @@ pytest
 ```
 
 A cada push/PR, o [workflow de CI](.github/workflows/ci.yml) instala as
-dependências, roda o `pytest` e executa os notebooks autocontidos (06 e 07)
-para garantir que não quebram.
+dependências, roda o `pytest` e **executa os notebooks autocontidos**
+(01, 02, 03, 05, 06 e 07) para garantir que não quebram. O notebook 04 fica de
+fora por um bug pré-existente (o exemplo 8.8 chama `func_original8`, que nunca é
+definido) — follow-up à parte.
 
 ## Bibliotecas utilizadas
 
 - [NumPy](https://numpy.org/) — vetorização e operações numéricas
 - [SciPy](https://scipy.org/) — `scipy.signal`, `scipy.io.wavfile`
 - [Matplotlib](https://matplotlib.org/) — gráficos
-- [SoundFile](https://python-soundfile.readthedocs.io/) — leitura/escrita de `.wav`
 - [ipywidgets](https://ipywidgets.readthedocs.io/) — controles interativos
-- [Requests](https://requests.readthedocs.io/) — download das amostras
+- [Requests](https://requests.readthedocs.io/) — download das amostras de áudio
 
 ## Créditos
 
