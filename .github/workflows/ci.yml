@@ -24,11 +24,16 @@ jobs:
       - name: Testes (pytest)
         run: pytest
 
-      # Executa apenas os notebooks autocontidos (sem dependências externas).
-      # Os notebooks 02/03/05 usam amostras de áudio baixadas/locais e ficam
-      # fora da execução automática até serem tornados autocontidos.
+      # Executa os notebooks autocontidos (as amostras de áudio dos notebooks
+      # 02/03/05 são baixadas por URL em runtime, com fallback sintético).
+      # O notebook 04 fica fora por um bug pré-existente (exemplo 8.8 chama
+      # `func_original8`, nunca definido) — follow-up separado.
       - name: Executa notebooks autocontidos
         run: |
           jupyter nbconvert --to notebook --execute --output-dir /tmp/nb-out \
+            notebooks/01-sinais-elementares.ipynb \
+            notebooks/02-classificacao-sistemas.ipynb \
+            notebooks/03-analise-sinais-sonoros.ipynb \
+            notebooks/05-convolucao-rir.ipynb \
             notebooks/06-amostragem-aliasing.ipynb \
             notebooks/07-filtros-digitais.ipynb
