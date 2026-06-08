@@ -30,6 +30,7 @@ percorridos em ordem:
 | 08 | [`08-sinais-vitais-do-espectro.ipynb`](notebooks/08-sinais-vitais-do-espectro.ipynb) | **Capstone**: extrair respiração e batimento cardíaco de um sinal via passa-banda + FFT — a base do *WiFi sensing* (ex.: [RuView](https://github.com/ruvnet/RuView)), ligando o curso à fronteira. |
 | 09 | [`09-espectrograma-tempo-frequencia.ipynb`](notebooks/09-espectrograma-tempo-frequencia.ipynb) | Análise **tempo-frequência** (STFT/espectrograma): o que a FFT esconde, o chirp, o trade-off tempo×frequência e respiração com ritmo variável (sensing). |
 | 10 | [`10-sinais-complexos-iq.ipynb`](notebooks/10-sinais-complexos-iq.ipynb) | **Sinais complexos e I/Q**: fasores, parte real/imaginária, amplitude × fase, e por que a **fase** do CSI revela o movimento — o fundamento do sensoriamento por rádio. |
+| 11 | [`11-fase-movimento-hilbert.ipynb`](notebooks/11-fase-movimento-hilbert.ipynb) | **Transformada de Hilbert**: fabricar a quadratura de um sinal real (sinal analítico), extrair **envelope** e **frequência instantânea**; ganho de processamento × interferência na faixa. |
 
 ## Estrutura do projeto
 
