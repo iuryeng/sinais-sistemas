@@ -27,6 +27,7 @@ percorridos em ordem:
 | 05 | [`05-convolucao-rir.ipynb`](notebooks/05-convolucao-rir.ipynb) | Convolução de um sinal de áudio com a resposta ao impulso de uma sala (auralização). *Material de terceiros — ver Créditos.* |
 | 06 | [`06-amostragem-aliasing.ipynb`](notebooks/06-amostragem-aliasing.ipynb) | Amostragem, Teorema de Nyquist–Shannon, aliasing e dobramento espectral, reconstrução por interpolação *sinc* e um exemplo audível de aliasing. |
 | 07 | [`07-filtros-digitais.ipynb`](notebooks/07-filtros-digitais.ipynb) | Filtros FIR e IIR (Butterworth): resposta em frequência, projeto com SciPy, FIR × IIR, remoção de ruído e filtragem de áudio (passa-banda). |
+| 08 | [`08-sinais-vitais-do-espectro.ipynb`](notebooks/08-sinais-vitais-do-espectro.ipynb) | **Capstone**: extrair respiração e batimento cardíaco de um sinal via passa-banda + FFT — a base do *WiFi sensing* (ex.: [RuView](https://github.com/ruvnet/RuView)), ligando o curso à fronteira. |
 
 ## Estrutura do projeto
 
