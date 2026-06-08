@@ -29,6 +29,7 @@ percorridos em ordem:
 | 07 | [`07-filtros-digitais.ipynb`](notebooks/07-filtros-digitais.ipynb) | Filtros FIR e IIR (Butterworth): resposta em frequência, projeto com SciPy, FIR × IIR, remoção de ruído e filtragem de áudio (passa-banda). |
 | 08 | [`08-sinais-vitais-do-espectro.ipynb`](notebooks/08-sinais-vitais-do-espectro.ipynb) | **Capstone**: extrair respiração e batimento cardíaco de um sinal via passa-banda + FFT — a base do *WiFi sensing* (ex.: [RuView](https://github.com/ruvnet/RuView)), ligando o curso à fronteira. |
 | 09 | [`09-espectrograma-tempo-frequencia.ipynb`](notebooks/09-espectrograma-tempo-frequencia.ipynb) | Análise **tempo-frequência** (STFT/espectrograma): o que a FFT esconde, o chirp, o trade-off tempo×frequência e respiração com ritmo variável (sensing). |
+| 10 | [`10-sinais-complexos-iq.ipynb`](notebooks/10-sinais-complexos-iq.ipynb) | **Sinais complexos e I/Q**: fasores, parte real/imaginária, amplitude × fase, e por que a **fase** do CSI revela o movimento — o fundamento do sensoriamento por rádio. |
 
 ## Estrutura do projeto
 

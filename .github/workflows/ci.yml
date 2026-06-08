@@ -38,4 +38,5 @@ jobs:
             notebooks/06-amostragem-aliasing.ipynb \
             notebooks/07-filtros-digitais.ipynb \
             notebooks/08-sinais-vitais-do-espectro.ipynb \
-            notebooks/09-espectrograma-tempo-frequencia.ipynb
+            notebooks/09-espectrograma-tempo-frequencia.ipynb \
+            notebooks/10-sinais-complexos-iq.ipynb
