@@ -40,4 +40,5 @@ jobs:
             notebooks/08-sinais-vitais-do-espectro.ipynb \
             notebooks/09-espectrograma-tempo-frequencia.ipynb \
             notebooks/10-sinais-complexos-iq.ipynb \
-            notebooks/11-fase-movimento-hilbert.ipynb
+            notebooks/11-fase-movimento-hilbert.ipynb \
+            notebooks/12-welch-autocorrelacao.ipynb

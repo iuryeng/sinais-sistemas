@@ -31,6 +31,7 @@ percorridos em ordem:
 | 09 | [`09-espectrograma-tempo-frequencia.ipynb`](notebooks/09-espectrograma-tempo-frequencia.ipynb) | Análise **tempo-frequência** (STFT/espectrograma): o que a FFT esconde, o chirp, o trade-off tempo×frequência e respiração com ritmo variável (sensing). |
 | 10 | [`10-sinais-complexos-iq.ipynb`](notebooks/10-sinais-complexos-iq.ipynb) | **Sinais complexos e I/Q**: fasores, parte real/imaginária, amplitude × fase, e por que a **fase** do CSI revela o movimento — o fundamento do sensoriamento por rádio. |
 | 11 | [`11-fase-movimento-hilbert.ipynb`](notebooks/11-fase-movimento-hilbert.ipynb) | **Transformada de Hilbert**: fabricar a quadratura de um sinal real (sinal analítico), extrair **envelope** e **frequência instantânea**; ganho de processamento × interferência na faixa. |
+| 12 | [`12-welch-autocorrelacao.ipynb`](notebooks/12-welch-autocorrelacao.ipynb) | **Estatística espectral**: periodograma × **Welch** (PSD estável por média de janelas) e **autocorrelação** (periodicidade no tempo); estimação robusta de frequência e seus trade-offs. |
 
 ## Estrutura do projeto
 
